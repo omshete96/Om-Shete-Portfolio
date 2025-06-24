@@ -1,0 +1,73 @@
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
+import { motion } from "framer-motion";
+
+export default function AboutSection() {
+
+
+  return (
+    <section id="about" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-4xl font-bold mb-4 gradient-text">About Me</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Passionate developer and a quick learner creating impactful digital solutions
+          </p>
+        </motion.div>
+        
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <img
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+              alt="Modern professional office environment"
+              className="rounded-2xl shadow-xl w-full h-auto"
+            />
+          </motion.div>
+          
+          <motion.div
+            className="space-y-6"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-lg text-gray-700 leading-relaxed">
+              I'm a passionate Computer Engineering student at Nutan Maharashtra Institute of Engineering 
+              and Technology, Pune, with a current CGPA of 9.19. My journey is driven by enthusiasm for 
+              Full Stack Development, AI/ML, and Data Science technologies.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              I specialize in Next.js, React, Node.js, Python, and C++, with experience in both frontend 
+              and backend development. I believe in building applications that not only solve problems but 
+              also provide exceptional user experiences.
+            </p>
+            
+            <div className="grid grid-cols-2 gap-6 pt-6">
+              <div className="text-center p-6 bg-gray-50 rounded-xl">
+                <div className="text-3xl font-bold text-primary mb-2">350+</div>
+                <div className="text-gray-600">DSA Problems Solved</div>
+              </div>
+              <div className="text-center p-6 bg-gray-50 rounded-xl">
+                <div className="text-3xl font-bold text-primary mb-2">9.19</div>
+                <div className="text-gray-600">CGPA</div>
+              </div>
+            </div>
+            
+            
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
