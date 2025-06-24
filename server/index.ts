@@ -56,14 +56,19 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
-  // ALWAYS serve the app on port 5000
-  // this serves both the API and the client.
-  // It is the only port that is not firewalled.
-  const port = 5000;
-  server.listen({
-    port,
-    host: "127.0.0.1",
-  }, () => {
-    log(`serving on port ${port}`);
-  });
+  // Port and host configuration
+  const port = process.env.PORT || 5000;
+  // In production, bind to 0.0.0.0 for containerized environments like Render.
+  // In development, use 127.0.0.1 to avoid Windows-specific issues.
+  const host = app.get("env") === "production" ? "0.0.0.0" : "127.0.0.1";
+
+  server.listen(
+    {
+      port: Number(port),
+      host,
+    },
+    () => {
+      log(`serving on port ${port}`);
+    },
+  );
 })();
