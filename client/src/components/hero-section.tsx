@@ -57,7 +57,7 @@ export default function HeroSection() {
                 <GithubIcon className="w-6 h-6" />
               </a>
               <a
-                href="https://linkedin.com/in/om-shete"
+                href="https://www.linkedin.com/in/om-shete-13701924b/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-primary transition-colors duration-300"
