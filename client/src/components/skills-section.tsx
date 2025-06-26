@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code, Server, Settings } from "lucide-react";
+import { BrainCircuit, Code, Server, Settings } from "lucide-react";
 
 const skillCategories = [
   {
@@ -7,9 +7,9 @@ const skillCategories = [
     icon: Code,
     color: "text-primary",
     skills: [
-      { name: "Next.js/React", level: 75 },
+      { name: "Next.js/React", level: 70 },
       { name: "JavaScript", level: 88 },
-      { name: "HTML/CSS", level: 75 },
+      { name: "HTML/CSS", level: 70 },
     ],
   },
   {
@@ -32,11 +32,22 @@ const skillCategories = [
       { name: "Database Systems", level: 85 },
     ],
   },
+  {
+    title: "AI/ML",
+    icon: BrainCircuit,
+    color: "text-green-500",
+    skills: [
+      { name: "Artificial Intelligence", level: 80 },
+      { name: "Machine Learning", level: 80 },
+      { name: "Data Science", level: 80 },
+    ],
+  },
 ];
 
 const technologies = [
   "Next.js", "React.js", "Node.js", "Express.js", "Python", "C++", "Java", 
-  "JavaScript", "MySQL", "MongoDB", "PostgreSQL", "Oracle", "Git"
+  "JavaScript", "MySQL", "MongoDB", "PostgreSQL", "Oracle", "Git",
+  "Artificial Intelligence", "Machine Learning", "Data Science"
 ];
 
 export default function SkillsSection() {
@@ -56,7 +67,7 @@ export default function SkillsSection() {
           </p>
         </motion.div>
         
-        <div className="grid lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid lg:grid-cols-4 gap-8 mb-12">
           {skillCategories.map((category, index) => (
             <motion.div
               key={category.title}
