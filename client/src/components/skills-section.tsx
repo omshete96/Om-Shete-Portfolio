@@ -7,9 +7,9 @@ const skillCategories = [
     icon: Code,
     color: "text-primary",
     skills: [
-      { name: "Next.js/React", level: 90 },
+      { name: "Next.js/React", level: 75 },
       { name: "JavaScript", level: 88 },
-      { name: "HTML/CSS", level: 92 },
+      { name: "HTML/CSS", level: 75 },
     ],
   },
   {
