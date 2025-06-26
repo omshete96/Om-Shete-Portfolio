@@ -78,6 +78,10 @@
     background-clip: text;
   }
 
+  .text-green-500 {
+    color: hsl(145, 63%, 42%);
+  }
+
   .skill-bar {
     background: var(--gradient-primary);
   }
