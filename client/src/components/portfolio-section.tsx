@@ -9,7 +9,6 @@ const projects = [
     image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
     technologies: ["Next.js", "C++", "Encryption"],
     liveUrl: "https://web-based-encryption-decryption-too.vercel.app/",
-    githubUrl: "https://github.com/omshete96/Web-Based-Data-Encryption-Decryption-Tool",
   },
   {
     title: "User Authentication System",
@@ -17,7 +16,6 @@ const projects = [
     image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
     technologies: ["Next.js", "MySQL", "Authentication"],
     // liveUrl: "#",
-    githubUrl: "https://github.com/omshete96/User-Authentication-System",
   },
   {
     title: "Netflix Movie Recommender System",
@@ -25,7 +23,6 @@ const projects = [
     image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
     technologies: ["Python", "Machine Learning", "Pandas"],
     // liveUrl: "#",
-    githubUrl: "https://github.com/omshete96/Netflix-Movie-Recommender-System",
   },
   {
     title: "News Aggregator",
@@ -33,7 +30,6 @@ const projects = [
     image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
     technologies: ["Next.js", "News API", "JavaScript"],
     // liveUrl: "#",
-    githubUrl: "https://github.com/omshete96/News-Aggregator",
   },
   {
     title: "Automatic Language Translator Bot",
@@ -41,7 +37,6 @@ const projects = [
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
     technologies: ["Python", "Translation API", "NLP"],
     // liveUrl: "#",
-    githubUrl: "https://github.com/omshete96/Real-Time-Language-Translator-Bot-Using-python",
   },
 ];
 
@@ -117,15 +112,6 @@ export default function PortfolioSection() {
                       Live Demo
                     </a>
                   )}
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm text-gray-500 hover:text-primary transition-colors"
-                  >
-                    <GithubIcon className="w-4 h-4" />
-                    View Code
-                  </a>
                 </div>
               </div>
             </motion.div>
