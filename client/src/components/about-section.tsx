@@ -55,12 +55,12 @@ export default function AboutSection() {
             
             <div className="grid grid-cols-2 gap-6 pt-6">
               <div className="text-center p-6 bg-gray-50 rounded-xl">
-                <div className="text-3xl font-bold text-primary mb-2">350+</div>
+                <div className="text-3xl font-bold text-primary mb-2">375+</div>
                 <div className="text-gray-600">DSA Problems Solved</div>
               </div>
               <div className="text-center p-6 bg-gray-50 rounded-xl">
-                <div className="text-3xl font-bold text-primary mb-2">9.19</div>
-                <div className="text-gray-600">CGPA</div>
+                <div className="text-3xl font-bold text-primary mb-2">8.53</div>
+                <div className="text-gray-600">CGPA Till Sem VI</div>
               </div>
             </div>
             
