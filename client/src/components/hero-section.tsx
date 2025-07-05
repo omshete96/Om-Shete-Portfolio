@@ -27,8 +27,8 @@ export default function HeroSection() {
               Full Stack Developer & AI Enthusiast
             </h2>
             <p className="text-lg text-gray-700 mb-8 leading-relaxed max-w-2xl">
-              Computer Engineering graduate with 9.19 CGPA, passionate about Full Stack Development, 
-              AI/ML, and Data Science. I build innovative web applications and solve complex problems through code.
+              Computer Engineering student with an aggregate CGPA of 8.53 (till Semester VI), passionate about Full Stack Development, AI/ML, and 
+              Data Science. Skilled at building innovative web applications and solving complex problems through code.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <Button
