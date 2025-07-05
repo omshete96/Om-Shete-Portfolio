@@ -43,9 +43,9 @@ export default function AboutSection() {
             viewport={{ once: true }}
           >
             <p className="text-lg text-gray-700 leading-relaxed">
-              I'm a passionate Computer Engineering student at Nutan Maharashtra Institute of Engineering 
-              and Technology, Pune, with a current CGPA of 9.19. My journey is driven by enthusiasm for 
-              Full Stack Development, AI/ML, and Data Science technologies.
+             I'm a passionate Computer Engineering student at Nutan Maharashtra Institute of Engineering and Technology, Pune, 
+             with an aggregate CGPA of 8.53 (till Semester VI). My journey is driven by a strong enthusiasm for Full Stack Development, AI/ML, and 
+             Data Science technologies.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               I specialize in Next.js, React, Node.js, Python, and C++, with experience in both frontend 
