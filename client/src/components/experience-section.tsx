@@ -25,7 +25,7 @@ const highlights = [
   },
   {
     title: "Academic Excellence",
-    description: "9.19 CGPA in Computer Engineering, 78.17% in HSC",
+    description: "8.53 CGPA in Computer Engineering (Aggregate Till Sem VI), 78.17% in HSC",
     image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300",
   },
   {
