@@ -35,8 +35,8 @@ export default function Navigation() {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm"
-          : "bg-transparent"
+          ? "glass-morphism"
+          : "bg-glass-white backdrop-blur-md border-b border-glass-border"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,7 +49,7 @@ export default function Navigation() {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 hover:text-primary transition-colors duration-300 font-medium"
+                className="text-gray-300 hover:text-primary transition-colors duration-300 font-medium"
               >
                 {item.label}
               </button>
@@ -59,17 +59,17 @@ export default function Navigation() {
           {/* Mobile Navigation */}
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="sm" className="md:hidden">
+              <Button variant="ghost" size="sm" className="md:hidden text-gray-300 hover:text-primary">
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-dark-secondary border-glass-border">
               <div className="flex flex-col space-y-4 mt-8">
                 {navItems.map((item) => (
                   <button
                     key={item.href}
                     onClick={() => scrollToSection(item.href)}
-                    className="text-left text-lg font-medium text-gray-700 hover:text-primary transition-colors duration-300 py-2"
+                    className="text-left text-lg font-medium text-gray-300 hover:text-primary transition-colors duration-300 py-2"
                   >
                     {item.label}
                   </button>
