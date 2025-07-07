@@ -52,7 +52,7 @@ const technologies = [
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="py-20 bg-gray-50">
+    <section id="skills" className="py-20 bg-dark-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
@@ -62,7 +62,7 @@ export default function SkillsSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl font-bold mb-4 gradient-text">Skills & Technologies</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             A comprehensive toolkit for building modern web applications
           </p>
         </motion.div>
@@ -71,7 +71,7 @@ export default function SkillsSection() {
           {skillCategories.map((category, index) => (
             <motion.div
               key={category.title}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-dark-secondary p-8 rounded-2xl border border-glass-border card-glow"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -80,15 +80,15 @@ export default function SkillsSection() {
               <div className={`text-4xl mb-4 ${category.color}`}>
                 <category.icon className="w-10 h-10" />
               </div>
-              <h3 className="text-xl font-semibold mb-4">{category.title}</h3>
+              <h3 className="text-xl font-semibold mb-4 text-white">{category.title}</h3>
               <div className="space-y-3">
                 {category.skills.map((skill) => (
                   <div key={skill.name}>
                     <div className="flex justify-between items-center mb-1">
-                      <span className="font-medium">{skill.name}</span>
+                      <span className="font-medium text-gray-300">{skill.name}</span>
                       <span className="text-sm text-gray-500">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div className="w-full bg-dark-tertiary rounded-full h-2">
                       <motion.div
                         className="skill-bar h-2 rounded-full"
                         initial={{ width: 0 }}
@@ -105,18 +105,18 @@ export default function SkillsSection() {
         </div>
 
         <motion.div
-          className="bg-white p-8 rounded-2xl shadow-lg"
+          className="bg-dark-secondary p-8 rounded-2xl border border-glass-border card-glow"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-semibold mb-6 text-center">Technology Stack</h3>
+          <h3 className="text-2xl font-semibold mb-6 text-center gradient-text">Technology Stack</h3>
           <div className="flex flex-wrap justify-center gap-4">
             {technologies.map((tech, index) => (
               <motion.span
                 key={tech}
-                className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium hover:bg-blue-200 transition-colors duration-300"
+                className="tech-tag px-4 py-2 rounded-full font-medium text-white"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
