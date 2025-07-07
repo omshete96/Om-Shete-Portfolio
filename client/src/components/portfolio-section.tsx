@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-  import { ExternalLink, GithubIcon } from "lucide-react";
-  import { motion } from "framer-motion";
+import { ExternalLink, GithubIcon } from "lucide-react";
+import { motion } from "framer-motion";
   
   const projects = [
     {
@@ -61,6 +61,12 @@ import { Button } from "@/components/ui/button";
     "JavaScript": "bg-amber-900/40 text-amber-300 border-amber-700/50",
     "Translation API": "bg-teal-900/40 text-teal-300 border-teal-700/50",
     "NLP": "bg-violet-900/40 text-violet-300 border-violet-700/50",
+    // Add custom effects for Bloomberg Terminal Clone technologies
+    "React": "bg-cyan-900/40 text-cyan-300 border-cyan-700/50",
+    "TypeScript": "bg-blue-900/40 text-blue-300 border-blue-700/50",
+    "Node.js": "bg-green-900/40 text-green-300 border-green-700/50",
+    "Socket.IO": "bg-purple-900/40 text-purple-300 border-purple-700/50",
+    "Financial APIs": "bg-yellow-900/40 text-yellow-300 border-yellow-700/50",
   };
   
   export default function PortfolioSection() {
@@ -154,4 +160,3 @@ import { Button } from "@/components/ui/button";
       </section>
     );
   }
-  
