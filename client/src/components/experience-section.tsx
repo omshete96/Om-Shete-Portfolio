@@ -6,14 +6,14 @@ const experiences = [
     company: "Edunet Foundation",
     period: "Jan - Feb 2025",
     description: "Explored AI/ML concepts and applications, contributing to educational technology initiatives and AI research projects.",
-    color: "bg-primary",
+    color: "bg-gradient-to-r from-primary to-purple-500",
   },
   {
     title: "Node.js Intern",
     company: "Celebal Technologies",
     period: "May - July 2025",
     description: "Learned and implement about how Node.js is used in backend and helpful for various backend operations",
-    color: "bg-secondary",
+    color: "bg-gradient-to-r from-secondary to-primary",
   },
 ];
 
@@ -37,7 +37,7 @@ const highlights = [
 
 export default function ExperienceSection() {
   return (
-    <section id="experience" className="py-20 bg-gray-50">
+    <section id="experience" className="py-20 bg-dark-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
@@ -47,15 +47,15 @@ export default function ExperienceSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl font-bold mb-4 gradient-text">Professional Experience</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             My journey through various roles and companies that shaped my expertise
           </p>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
           <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary rounded-full"></div>
+            {/* Timeline line with glow effect */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary to-secondary rounded-full shadow-lg"></div>
             
             {experiences.map((experience, index) => (
               <motion.div
@@ -69,14 +69,14 @@ export default function ExperienceSection() {
                 viewport={{ once: true }}
               >
                 <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'pl-8'}`}>
-                  <div className="bg-white p-6 rounded-xl shadow-lg">
+                  <div className="bg-dark-secondary p-6 rounded-xl border border-glass-border card-glow">
                     <h3 className="text-xl font-semibold text-primary mb-2">{experience.title}</h3>
-                    <h4 className="text-lg font-medium text-gray-700 mb-2">{experience.company}</h4>
-                    <p className="text-gray-600 mb-3">{experience.period}</p>
-                    <p className={`text-sm text-gray-600 ${experience.company === 'Edunet Foundation' ? 'text-justify' : ''}`}>{experience.description}</p>
+                    <h4 className="text-lg font-medium text-gray-300 mb-2">{experience.company}</h4>
+                    <p className="text-gray-400 mb-3">{experience.period}</p>
+                    <p className={`text-sm text-gray-300 ${experience.company === 'Edunet Foundation' ? 'text-justify' : ''}`}>{experience.description}</p>
                   </div>
                 </div>
-                <div className={`absolute left-1/2 transform -translate-x-1/2 w-6 h-6 ${experience.color} rounded-full border-4 border-white shadow-lg`}></div>
+                <div className={`absolute left-1/2 transform -translate-x-1/2 w-6 h-6 ${experience.color} rounded-full border-4 border-dark-primary shadow-lg animate-glow`}></div>
                 <div className="w-5/12"></div>
               </motion.div>
             ))}
@@ -87,7 +87,7 @@ export default function ExperienceSection() {
           {highlights.map((highlight, index) => (
             <motion.div
               key={highlight.title}
-              className="text-center p-6 bg-white rounded-xl shadow-lg"
+              className="text-center p-6 bg-dark-secondary rounded-xl border border-glass-border card-glow"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -98,8 +98,8 @@ export default function ExperienceSection() {
                 alt={highlight.title}
                 className="w-full h-40 object-cover rounded-lg mb-4"
               />
-              <h3 className="text-lg font-semibold mb-2">{highlight.title}</h3>
-              <p className="text-gray-600 text-sm">{highlight.description}</p>
+              <h3 className="text-lg font-semibold mb-2 text-white">{highlight.title}</h3>
+              <p className="text-gray-400 text-sm">{highlight.description}</p>
             </motion.div>
           ))}
         </div>
