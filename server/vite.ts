@@ -1,7 +1,7 @@
 import express, { type Express } from "express";
 import fs from "fs";
 import path from "path";
-import { createServer as createViteServer, createLogger, resolveConfig } from "vite";
+import { createServer as createViteServer, createLogger } from "vite";
 import { type Server } from "http";
 import viteConfig from "../vite.config";
 import { nanoid } from "nanoid";
@@ -19,20 +19,15 @@ export function log(message: string, source = "express") {
   console.log(`${formattedTime} [${source}] ${message}`);
 }
 
-export async function setupVite(app: Express, server?: Server) {
-  const publicDir = path.resolve(import.meta.dirname, "..", "client", "public");
-  app.use(express.static(publicDir));
-  
+export async function setupVite(app: Express, server: Server) {
   const serverOptions = {
     middlewareMode: true,
-    hmr: server ? { server } : undefined,
-    allowedHosts: [".replit.com", ".repl.co"],
+    hmr: { server },
+    allowedHosts: true as const,
   };
 
-  const config = viteConfig({ mode: app.get("env"), command: "serve" });
-
   const vite = await createViteServer({
-    ...config,
+    ...viteConfig,
     configFile: false,
     customLogger: {
       ...viteLogger,
@@ -41,10 +36,7 @@ export async function setupVite(app: Express, server?: Server) {
         process.exit(1);
       },
     },
-    server: {
-      ...config.server,
-      ...serverOptions,
-    },
+    server: serverOptions,
     appType: "custom",
   });
 
