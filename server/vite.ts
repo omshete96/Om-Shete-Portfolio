@@ -19,13 +19,13 @@ export function log(message: string, source = "express") {
   console.log(`${formattedTime} [${source}] ${message}`);
 }
 
-export async function setupVite(app: Express, server: Server) {
+export async function setupVite(app: Express, server?: Server) {
   const publicDir = path.resolve(import.meta.dirname, "..", "client", "public");
   app.use(express.static(publicDir));
   
   const serverOptions = {
     middlewareMode: true,
-    hmr: { server },
+    hmr: server ? { server } : undefined,
     allowedHosts: [".replit.com", ".repl.co"],
   };
 
