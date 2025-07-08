@@ -1,6 +1,7 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import { createServer } from "http";
 
 const app = express();
 app.use(express.json());
@@ -37,7 +38,7 @@ app.use((req, res, next) => {
 });
 
 (async () => {
-  const server = await registerRoutes(app);
+  await registerRoutes(app); // Register all routes and middleware first
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
     const status = err.status || err.statusCode || 500;
@@ -51,7 +52,7 @@ app.use((req, res, next) => {
   // setting up all the other routes so the catch-all route
   // doesn't interfere with the other routes
   if (app.get("env") === "development") {
-    await setupVite(app, server);
+    await setupVite(app, undefined); // No server needed for HMR in dev
   } else {
     serveStatic(app);
   }
@@ -62,6 +63,7 @@ app.use((req, res, next) => {
   // In development, use 127.0.0.1 to avoid Windows-specific issues.
   const host = app.get("env") === "production" ? "0.0.0.0" : "127.0.0.1";
 
+  const server = createServer(app); // Create the HTTP server after all middleware
   server.listen(
     {
       port: Number(port),
